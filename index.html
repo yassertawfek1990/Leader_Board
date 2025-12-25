@@ -367,7 +367,7 @@ body {
                     activity2: parseFloat(row.Activity2) || 0,
                     activity3: parseFloat(row.Activity3) || 0,
                     activity4: parseFloat(row.Activity4) || 0,
-                    stars: parseFloat(row.Stars) || 0
+                    stars: parseFloat(row.Mark) || 0
                 })).filter(team => team.name);
                 
                 teams.sort((a, b) => b.stars - a.stars);
