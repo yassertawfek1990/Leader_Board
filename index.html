@@ -340,6 +340,92 @@ body {
     }
 }
 
+        /* ================================
+   LUXURY CELEBRATION EFFECTS
+================================ */
+
+/* Overlay */
+.celebration-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    opacity: 0.9;
+    animation: confetti-fall 4s linear infinite;
+    border-radius: 2px;
+}
+
+/* Champagne / Gold Palette */
+.confetti.gold { background: #c9a24d; }
+.confetti.light-gold { background: #e6d18a; }
+.confetti.pearl { background: #f8f8f8; }
+.confetti.bronze { background: #8c6a3d; }
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ================================
+   FIREWORKS (SUBTLE & CLASSY)
+================================ */
+
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #e6d18a, #c9a24d);
+    animation: firework-burst 1.2s ease-out forwards;
+}
+
+@keyframes firework-burst {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* ================================
+   FLOATING CELEBRATION ICONS
+================================ */
+
+.floating-emoji {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: float-up 5s ease-in infinite;
+    opacity: 0.85;
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
     </style>
 </head>
 <body>
